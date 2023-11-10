@@ -1,11 +1,11 @@
 // Wait for the DOM to finish loading before running the game
-// Get the button Elements and add event listeners to them
+// Get the button elements and add event listeners to them
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
-        button.addEventListener("click", function () {
+        button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "submit") {
                 alert("You clicked Submit!");
             } else {
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
  */
 function runGame(gameType) {
 
-    //create two random numbers for num1 and num2 between 1 and 25
+    //Create two random numbers for num1 and num2 between 1 and 25
     let num1 = Math.floor(Math.random() * 25) + 1;
     let num2 = Math.floor(Math.random() * 25) + 1;
 
@@ -35,6 +35,7 @@ function runGame(gameType) {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
     }
+
 }
 
 function checkAnswer() {
@@ -54,9 +55,11 @@ function incrementWrongAnswer() {
 }
 
 function displayAdditionQuestion(operand1, operand2) {
+
     document.getElementById('operand1').textContent = operand1;
     document.getElementById('operand2').textContent = operand2;
     document.getElementById('operator').textContent = "+";
+
 }
 
 function displaySubtractQuestion() {
@@ -64,5 +67,5 @@ function displaySubtractQuestion() {
 }
 
 function displayMultiplyQuestion() {
-
+    
 }
